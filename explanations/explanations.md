@@ -31,4 +31,44 @@ export default function Button({ children, ...rest }) {
 - Kann man mit Compound Components das ganze flach halten:
   <img width="500" alt="Bildschirmfoto 2025-03-07 um 10 20 50" src="https://github.com/user-attachments/assets/d817841a-8518-4135-bc99-e0c9571dba8d" />
 
+- Mann muss nicht alle Komponenten einzeln importieren und kann mit der "dot syntax" eine seperate index Datei erstellen, in der man eine Komponente wie ein object mit weiteren properties erweitert und dieses dann exportiert:
+
+```js
+import Menu from "./Menu";
+import MenuButton from "./MenuButton";
+import MenuDropdown from "./MenuDropdown";
+import MenuItem from "./MenuItem";
+
+Menu.Button = MenuButton;
+Menu.Dropdown = MenuDropdown;
+Menu.Item = MenuItem;
+
+export default Menu;
+```
+
+- Dadurch müssen wir nur eine Komponente importieren
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Menu from "./Menu/Menu";
+
+function App() {
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
+
+  return (
+    <Menu>
+      <Menu.Button>Sports</Menu.Button>
+      <Menu.Dropdown>
+        {sports.map((sport) => (
+          <Menu.Item key={sport}>{sport}</Menu.Item>
+        ))}
+      </Menu.Dropdown>
+    </Menu>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
+
 ## Headless Components
