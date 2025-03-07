@@ -26,7 +26,8 @@ export default function Button({ children, ...rest }) {
 - Es gibt HTML Beispiele bzw. Compound Components in HTML wie list items innerhalb einer unordered oder ordered list, die gewisse styles bekommen.
 
 - Anstatt eine Baumwurzel Struktur aufzubauen wie hier:
-<img width="1065" alt="Bildschirmfoto 2025-03-07 um 10 14 11" src="https://github.com/user-attachments/assets/1249468e-10e2-4aed-88d4-335f9005f05a" />
+<img width="400" alt="Bildschirmfoto 2025-03-07 um 10 14 11" src="https://github.com/user-attachments/assets/1249468e-10e2-4aed-88d4-335f9005f05a" />
 
 - Kann man mit Compound Components das ganze flach halten:
-<img width="1065" alt="Bildschirmfoto 2025-03-07 um 10 14 11" src="https://github.com/user-attachments/assets/0cc61fdf-e561-42d8-8da9-d1e3611e1f77" />
+<img width="400" alt="Bildschirmfoto 2025-03-07 um 10 14 27" src="https://github.com/user-attachments/assets/92f6721d-7d3c-4b14-86b1-a2da7aaced71" />
+
