@@ -51,7 +51,7 @@ export default Menu;
 ```js
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Menu from "./Menu/Menu";
+import Menu from "./Menu/MenuIndex";
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
