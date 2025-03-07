@@ -20,4 +20,6 @@ export default function Button({ children, ...rest }) {
 
 ## Compound Components
 
-- Neben COntext, auch eine Lösung um props drilling zu vermeiden.
+- Neben Context API, auch eine Lösung um props drilling zu vermeiden.
+- Verwenden children props
+- Haben "dedicated functions/styling"
