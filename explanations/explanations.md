@@ -24,3 +24,7 @@ export default function Button({ children, ...rest }) {
 - Verwenden children props
 - Haben "dedicated functions/styling"
 - Es gibt HTML Beispiele bzw. Compound Components in HTML wie list items innerhalb einer unordered oder ordered list, die gewisse styles bekommen.
+
+- Anstatt eine Baumwurzel Struktur aufzubauen wie hier:
+
+- Kann man mit Compound Components das ganze flach halten:
