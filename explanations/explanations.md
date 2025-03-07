@@ -30,6 +30,6 @@ export default function Button({ children, ...rest }) {
 
 
 - Kann man mit Compound Components das ganze flach halten:
-<img width="1033" alt="Bildschirmfoto 2025-03-07 um 10 20 50" src="https://github.com/user-attachments/assets/d817841a-8518-4135-bc99-e0c9571dba8d" />
+<img width="400" alt="Bildschirmfoto 2025-03-07 um 10 20 50" src="https://github.com/user-attachments/assets/d817841a-8518-4135-bc99-e0c9571dba8d" />
 
 
