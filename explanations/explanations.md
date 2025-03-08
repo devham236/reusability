@@ -74,3 +74,26 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 ## Headless Components
 
 - Haben kein UI bzw. jsx und bieten nur Funktionalität in deiner Anwendung
+- Lässt sich anhand dieser Star Komponente gut erklären:
+
+```js
+import React from "react";
+import { BsStar, BsStarFill } from "react-icons/bs";
+
+export default function Star() {
+  const [starred, setStarred] = React.useState(false);
+
+  function toggle() {
+    setStarred((prev) => !prev);
+  }
+
+  return starred ? (
+    <BsStarFill className="star filled" onClick={toggle} />
+  ) : (
+    <BsStar className="star " onClick={toggle} />
+  );
+}
+```
+
+- So können wir mit der Komponente den Stern von gefüllt auf nicht gefüllt und andersrum toggeln
+- Ziel ist diese Toggle Funktionalität zu extrahieren und mehr reusable zu machen um nicht nur diese Stern Komponente zu toggeln, sondern auch andere Komponenten.
