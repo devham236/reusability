@@ -240,3 +240,30 @@ export default function MenuButton({ children }) {
   );
 }
 ```
+
+- Dadurch sehen dann die Compound Components in der App Komponente deutlich cleaner aus:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Toggle from "./components/Toggle/index";
+import { BsStar, BsStarFill } from "react-icons/bs";
+
+function App() {
+  return (
+    <>
+      <Menu>
+        <Menu.Button>Menu</Menu.Button>
+        <Menu.Dropdown>
+          <Menu.Item>Home</Menu.Item>
+          <Menu.Item>About</Menu.Item>
+          <Menu.Item>Contact</Menu.Item>
+          <Menu.Item>Blog</Menu.Item>
+        </Menu.Dropdown>
+      </Menu>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
