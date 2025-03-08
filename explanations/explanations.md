@@ -192,3 +192,51 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 - Das coole ist, du hast die Funktionalität einen state von true auf false und andersrum zu wechseln, komplett modular und "reusable" gemacht.
 - Kannst jetzt z.B eine "Sidebar" Komponente erstellen und du musst dich nur um das Styling kümmern, die Logik bei einem Button Klick diese zu öffnen, hast du mit der "Headless" Toggle Komponente schon gemacht
 - Das Problem ist, es kann sein das du sehr viele Komponente nesten muss um einfache Funktionalität zu erstellen.
+- Zum Beispiel wenn wir die Toggle Funktionalität für ein Menu verwenden wollen:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Toggle from "./components/Toggle/index";
+import { BsStar, BsStarFill } from "react-icons/bs";
+
+function App() {
+  return (
+    <>
+      <Toggle>
+        <Menu>
+          <Toggle.Button>
+            <Menu.Button>Menu</Menu.Button>
+          </Toggle.Button>
+          <Toggle.On>
+            <Menu.Dropdown>
+              <Menu.Item>Home</Menu.Item>
+              <Menu.Item>About</Menu.Item>
+              <Menu.Item>Contact</Menu.Item>
+              <Menu.Item>Blog</Menu.Item>
+            </Menu.Dropdown>
+          </Toggle.On>
+        </Menu>
+      </Toggle>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
+
+- Man kann die einzelnen Toggle Wrapper nehmen und dann in der entsprechenden Menu Child Komponente die Inhalte wrappen:
+
+```js
+import React from "react";
+import Button from "../Button/Button";
+import Toggle from "../Toggle/index";
+
+export default function MenuButton({ children }) {
+  return (
+    <Toggle.Button>
+      <Button>{children}</Button>
+    </Toggle.Button>
+  );
+}
+```
