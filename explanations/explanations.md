@@ -191,3 +191,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 - Das coole ist, du hast die Funktionalität einen state von true auf false und andersrum zu wechseln, komplett modular und "reusable" gemacht.
 - Kannst jetzt z.B eine "Sidebar" Komponente erstellen und du musst dich nur um das Styling kümmern, die Logik bei einem Button Klick diese zu öffnen, hast du mit der "Headless" Toggle Komponente schon gemacht
+- Das Problem ist, es kann sein das du sehr viele Komponente nesten muss um einfache Funktionalität zu erstellen.
