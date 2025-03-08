@@ -72,3 +72,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 ```
 
 ## Headless Components
+
+- Haben kein UI bzw. jsx und bieten nur Funktionalität in deiner Anwendung
