@@ -97,3 +97,97 @@ export default function Star() {
 
 - So können wir mit der Komponente den Stern von gefüllt auf nicht gefüllt und andersrum toggeln
 - Ziel ist diese Toggle Funktionalität zu extrahieren und mehr reusable zu machen um nicht nur diese Stern Komponente zu toggeln, sondern auch andere Komponenten.
+- Dafür erstellt man zuerst einen Context der alle Komponenten umwickelt, damit alle child Komponenten Zugriff auf die states usw haben:
+
+```js
+import React from "react";
+
+const ToggleContext = React.createContext();
+
+export default function Toggle({ children }) {
+  const [on, setOn] = React.useState(false);
+
+  function toggle() {
+    setOn((prevOn) => !prevOn);
+  }
+
+  return (
+    <ToggleContext.Provider value={{ on, toggle }}>
+      {children}
+    </ToggleContext.Provider>
+  );
+}
+
+export { ToggleContext };
+```
+
+- Dann brauchst du eine Komponente die den State toggled:
+
+```js
+import React from "react";
+import { ToggleContext } from "./Toggle";
+
+export default function ToggleButton({ children }) {
+  const { toggle } = React.useContext(ToggleContext);
+
+  return <div onClick={toggle}>{children}</div>;
+}
+```
+
+- Je nachdem ob der state im Context true oder false ist, brauchst du eine Komponente für beide Fälle
+- State ist true:
+
+```js
+import React from "react";
+import { ToggleContext } from "./Toggle";
+
+export default function ToggleOn({ children }) {
+  const { on } = React.useContext(ToggleContext);
+
+  return on ? children : null;
+}
+```
+
+- State ist false:
+
+```js
+import React from "react";
+import { ToggleContext } from "./Toggle";
+
+export default function ToggleOff({ children }) {
+  const { on } = React.useContext(ToggleContext);
+
+  return on ? null : children;
+}
+```
+
+- In deiner App kannst du dann diese Komponenten benutzen um bestimmte Elemente anzuzeigen:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Toggle from "./components/Toggle/index";
+import { BsStar, BsStarFill } from "react-icons/bs";
+
+function App() {
+  return (
+    <>
+      <Toggle>
+        <Toggle.Button>
+          <Toggle.On>
+            <BsStarFill className="star filled" />
+          </Toggle.On>
+          <Toggle.Off>
+            <BsStar className="star" />
+          </Toggle.Off>
+        </Toggle.Button>
+      </Toggle>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+```
+
+- Das coole ist, du hast die Funktionalität einen state von true auf false und andersrum zu wechseln, komplett modular und "reusable" gemacht.
+- Kannst jetzt z.B eine "Sidebar" Komponente erstellen und du musst dich nur um das Styling kümmern, die Logik bei einem Button Klick diese zu öffnen, hast du mit der "Headless" Toggle Komponente schon gemacht
