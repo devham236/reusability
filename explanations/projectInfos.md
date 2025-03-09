@@ -16,3 +16,6 @@
 
 5. Tooltip
 <img width="658" alt="Bildschirmfoto 2025-03-09 um 12 59 40" src="https://github.com/user-attachments/assets/b970dd60-2e6f-47a6-95b6-73d6771827e5" />
+
+6. Toast Popups   
+<img width="896" alt="Bildschirmfoto 2025-03-09 um 13 01 33" src="https://github.com/user-attachments/assets/008c3eea-e7f2-4fe4-93de-753c97c99f48" />
