@@ -274,3 +274,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 - Wird meistens benutzt um manuell das DOM zu manipulieren.
 
 ## Render Props
+
+- Eine Parent Komponente kann bestimmen was alles als JSX in einer Child Komponente gerendert werden soll, basierend auf dem state der child Komponente.
+- Deswegen auch "render props", wir können mithilfe von props bestimmen was gerendert werden soll
