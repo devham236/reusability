@@ -277,3 +277,46 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 - Eine Parent Komponente kann bestimmen was alles als JSX in einer Child Komponente gerendert werden soll, basierend auf dem state der child Komponente.
 - Deswegen auch "render props", wir können mithilfe von props bestimmen was gerendert werden soll
+- Hier in der App Komponente wird der Text basierend auf state in der Child Komponente geändert, die Parent Komponente bestimmt wie das JSX auszusehen hat:
+
+```js
+import React from "react";
+import Decision from "./Decision";
+
+function App() {
+  return (
+    <div>
+      <Decision
+        render={(goingOut) => {
+          return (
+            <h1>Am I going out tonight?? {goingOut ? "Yes!" : "Nope..."}</h1>
+          );
+        }}
+      />
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Die Decision Komponente hat die state Logik und die function um den state zu flippen:
+
+```js
+import React from "react";
+
+export default function Decision({ render }) {
+  const [goingOut, setGoingOut] = React.useState(false);
+
+  function toggleGoingOut() {
+    setGoingOut((prev) => !prev);
+  }
+
+  return (
+    <div>
+      <button onClick={toggleGoingOut}>Change mind</button>
+      {render(goingOut)}
+    </div>
+  );
+}
+```
