@@ -380,7 +380,7 @@ export default function App() {
   )
 }
 
-import React from "react"
+
 import { ToggleContext } from "./Toggle"
 
 export default function ToggleDisplay({ children }) {
