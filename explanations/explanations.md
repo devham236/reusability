@@ -356,3 +356,35 @@ export default function Decision({ children }) {
     )
 }
 ```
+
+- Um nochmal zurück zum Toggle Beispiel zu kommen, kann man mithilfe von redner props, die headless components Toggle.On und Toggle.Off weglassen und stattdessen die Toggle.Display komponente verwenden:
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Toggle from "./components/Toggle/index"
+
+export default function App() {
+  return (
+    <>
+      <Toggle>
+        <Toggle.Button>
+          <Toggle.Display>
+            {(on) => (
+              <div className={`box ${on ? 'filled' : ''}`}></div>
+            )}
+          </Toggle.Display>
+        </Toggle.Button>
+      </Toggle>
+    </>
+  )
+}
+
+import React from "react"
+import { ToggleContext } from "./Toggle"
+
+export default function ToggleDisplay({ children }) {
+    const { on } = React.useContext(ToggleContext)
+    return children(on)
+}
+```
