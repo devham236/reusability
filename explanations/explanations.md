@@ -272,3 +272,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 - Können damit einen Wert verändern ohne einen Rerender zu triggern.
 - Wird meistens benutzt um manuell das DOM zu manipulieren.
+
+## Render Props
