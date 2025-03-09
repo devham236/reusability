@@ -320,3 +320,39 @@ export default function Decision({ render }) {
   );
 }
 ```
+
+- Was heutzutage aber mehr oder weniger der Standard ist, ist es children als render props zu verwenden:
+
+```js
+import React from "react";
+import Decision from "./Decision";
+
+export default function App() {
+  return (
+    <div>
+      <Decision>
+        {(goingOut) => {
+          return (
+            <h1>Am I going out tonight?? {goingOut ? "Yes!" : "Nope..."}</h1>
+          );
+        }}
+      </Decision>
+    </div>
+  );
+}
+
+export default function Decision({ children }) {
+    const [goingOut, setGoingOut] = React.useState(false)
+
+    function toggleGoingOut() {
+        setGoingOut(prev => !prev)
+    }
+
+    return (
+        <div>
+            <button onClick={toggleGoingOut}>Change mind</button>
+            {children(goingOut)}
+        </div>
+    )
+}
+```
