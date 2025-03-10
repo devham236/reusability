@@ -1,7 +1,19 @@
-import React from "react";
+import React, { ReactNode, createContext, useState } from "react";
+import { BannerContextType } from "../types/bannerTypes";
 
-const Banners = () => {
-  return <div></div>;
+export const BannerContext = createContext<BannerContextType>({
+  variant: "success",
+  setVariant: () => {},
+});
+
+const Banners = ({ children }: { children: ReactNode }) => {
+  const [variant, setVariant] = useState("success");
+
+  return (
+    <BannerContext.Provider value={{ variant, setVariant }}>
+      <section className="section-container">{children}</section>
+    </BannerContext.Provider>
+  );
 };
 
 export default Banners;
