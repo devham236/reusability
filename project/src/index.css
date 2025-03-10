@@ -15,7 +15,6 @@
 .main-container .badge{
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 2px;
 }
 
 .main-container .badge:not(:last-child){
@@ -60,6 +59,10 @@
 .pink{
     color: #9D174D;
     background-color: #FCE7F3;
+}
+
+.not-rounded{
+    border-radius: 2px;
 }
 
 .rounded{
