@@ -1,7 +1,14 @@
 import React from "react";
+import Badge from "./Badge/Badge";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <main className="main-container">
+      <Badge>Badge</Badge>
+      <Badge>Badge</Badge>
+      <Badge>Badge</Badge>
+    </main>
+  );
 };
 
 export default App;

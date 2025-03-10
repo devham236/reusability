@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .badge{
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+}
+
+.main-container .badge:not(:last-child){
+    margin-right: 3rem;
+}
+
+.grey{
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+
+.red{
+    color: #991B1B;
+    background-color: #FEE2E2;
+}
+
+.yellow{
+    color: #92400E;
+    background-color: #FEF3C7;
+}
+
+.green{
+    color: #065F46;
+    background-color: #D1FAE5;
+}
+
+.blue{
+    color: #1E40AF;
+    background-color: #DBEAFE;
+}
+
+.indigo{
+    color: #3730A3;
+    background-color: #E0E7FF;
+}
+
+.purple{
+    color: #5B21B6;
+    background-color: #EDE9FE;
+}
+
+.pink{
+    color: #9D174D;
+    background-color: #FCE7F3;
+}
+
+.rounded{
+    border-radius: 12px;
+}
