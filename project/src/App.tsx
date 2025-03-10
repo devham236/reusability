@@ -11,6 +11,7 @@ const App = () => {
         Badge
       </Badge>
       <Badge color={"yellow"}>Badge</Badge>
+      <Badge></Badge>
     </main>
   );
 };

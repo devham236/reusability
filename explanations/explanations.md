@@ -18,6 +18,33 @@ export default function Button({ children, ...rest }) {
 }
 ```
 
+- Wenn du props optional machen möchtest, kannst du den props im interface ein ? anhängen und default Werte in deiner Komponente angeben:
+
+```js
+export interface BadgeProps {
+  children?: ReactNode;
+  color?: string;
+  rounded?: boolean;
+}
+
+import React from "react";
+import { BadgeProps } from "./types/badgeTypes";
+
+const Badge = ({
+  children = "Badge",
+  color = "grey",
+  rounded = false,
+}: BadgeProps) => {
+  return (
+    <button className={`badge ${color} ${rounded ? "rounded" : "not-rounded"}`}>
+      {children}
+    </button>
+  );
+};
+
+export default Badge;
+```
+
 ## Compound Components
 
 - Neben Context API, auch eine Lösung um props drilling zu vermeiden.
