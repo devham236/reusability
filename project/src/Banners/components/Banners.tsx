@@ -7,7 +7,7 @@ export const BannerContext = createContext<BannerContextType>({
 });
 
 const Banners = ({ children }: { children: ReactNode }) => {
-  const [variant, setVariant] = useState("success");
+  const [variant, setVariant] = useState("neutral");
 
   return (
     <BannerContext.Provider value={{ variant, setVariant }}>

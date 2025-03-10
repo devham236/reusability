@@ -4,13 +4,24 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .main-container{
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+
+.main-container .section-container:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+/*Badge*/
 
 .main-container .badge{
     border: none;
@@ -68,4 +79,56 @@
 
 .rounded{
     border-radius: 12px;
+}
+
+/*Banner*/
+
+.main-container .banner{
+    position: relative;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.main-container .banner svg{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+}
+
+.main-container .banner.success{
+    background-color: #ECFDF5;
+    color: #047857;
+}
+
+.main-container .banner.success svg{
+    color: #34D399;
+}
+
+.main-container .banner.warning{
+    background-color: #FFFBEB;
+    color: #B45309;
+}
+
+.main-container .banner.warning svg{
+    color: #FBBF24;
+}
+
+.main-container .banner.error{
+    background-color: #FEF2F2;
+    color: #B45309;
+}
+
+.main-container .banner.error svg{
+    color: #F87171;
+}
+
+.main-container .banner.neutral{
+    background-color: #EFF6FF;
+    color: #1C51B9;
+}
+
+.main-container .banner.neutral svg{
+    color: #60A5FA;
 }
