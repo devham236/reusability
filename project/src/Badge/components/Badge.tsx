@@ -1,5 +1,5 @@
 import React from "react";
-import { BadgeProps } from "./types/badgeTypes";
+import { BadgeProps } from "../types/badgeTypes";
 
 const Badge = ({
   children = "Badge",

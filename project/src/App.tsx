@@ -1,6 +1,6 @@
 import React from "react";
-import Badge from "./Badge/Badge";
-import Badges from "./Badge/Badges";
+import Badge from "./Badge/components/Badge";
+import Badges from "./Badge/components/Badges";
 
 const App = () => {
   return (
