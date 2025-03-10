@@ -15,6 +15,7 @@
 .main-container .badge{
     border: none;
     padding: 0.5rem 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .main-container .badge:not(:last-child){
