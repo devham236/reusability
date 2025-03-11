@@ -6,6 +6,7 @@ import Banner from "./Banners/components/Banner";
 import Tooltips from "./Tooltip/components/index";
 import TooltipsButton from "./Tooltip/components/TooltipsButton";
 import { FaInfoCircle } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const App = () => {
   return (
@@ -26,7 +27,20 @@ const App = () => {
 
       <Tooltips>
         <TooltipsButton>
-          <FaInfoCircle />
+          {(show: boolean) => {
+            return (
+              show && (
+                <div className="tooltip-container">
+                  <IoMdMail className="icon" />
+                  <h3>Archive Notes</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis temporibus explicabo volupta
+                  </p>
+                </div>
+              )
+            );
+          }}
         </TooltipsButton>
       </Tooltips>
     </main>

@@ -1,18 +1,16 @@
-import React, { ReactNode } from "react";
-import { IoMdMail } from "react-icons/io";
+import React, { ReactElement, useState } from "react";
+import { FaInfoCircle } from "react-icons/fa";
 
-const TooltipsButton = ({ children }: { children: ReactNode }) => {
+const TooltipsButton = ({ children }: { children: ReactElement }) => {
+  const [showContainer, setShowContainer] = useState(false);
   return (
-    <button className="tooltip-button">
-      {children}
-      <div className="tooltip-container">
-        <IoMdMail className="icon" />
-        <h3>Archive Notes</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-          temporibus explicabo volupta
-        </p>
-      </div>
+    <button
+      className="tooltip-button"
+      onMouseEnter={() => setShowContainer(true)}
+      onMouseLeave={() => setShowContainer(false)}
+    >
+      <FaInfoCircle />
+      {children(showContainer)}
     </button>
   );
 };
