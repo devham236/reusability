@@ -4,8 +4,6 @@ import Badges from "./Badge/components/Badges";
 import Banners from "./Banners/components/Banners";
 import Banner from "./Banners/components/Banner";
 import Tooltips from "./Tooltip/components/index";
-import TooltipsButton from "./Tooltip/components/TooltipsButton";
-import TooltipsContainer from "./Tooltip/components/TooltipsContainer";
 
 const App = () => {
   return (
@@ -25,30 +23,30 @@ const App = () => {
       </Banners>
 
       <Tooltips>
-        <TooltipsButton>
+        <Tooltips.Button>
           {(show: boolean) => {
             return (
               show && (
-                <TooltipsContainer
+                <Tooltips.Container
                   title="Archive Notes"
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur."
-                ></TooltipsContainer>
+                ></Tooltips.Container>
               )
             );
           }}
-        </TooltipsButton>
-        <TooltipsButton>
+        </Tooltips.Button>
+        <Tooltips.Button>
           {(show: boolean) => {
             return (
               show && (
-                <TooltipsContainer
+                <Tooltips.Container
                   title="Archive Notes"
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur."
-                ></TooltipsContainer>
+                ></Tooltips.Container>
               )
             );
           }}
-        </TooltipsButton>
+        </Tooltips.Button>
       </Tooltips>
     </main>
   );
