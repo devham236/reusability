@@ -1,7 +1,7 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
-const TooltipsButton = ({ children }: { children: ReactElement }) => {
+const TooltipsButton = ({ children }) => {
   const [showContainer, setShowContainer] = useState(false);
   return (
     <button
