@@ -132,3 +132,18 @@ body{
 .main-container .banner.neutral svg{
     color: #60A5FA;
 }
+
+/*Tooltip*/
+
+.tooltip-button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #EFF6FF;
+    position: relative;
+    color: #60A5FA;
+    cursor: pointer;
+}
+
+.tooltip-button:not(:last-child){
+    margin-right: 2rem;
+}

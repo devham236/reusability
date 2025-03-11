@@ -3,6 +3,9 @@ import Badge from "./Badge/components/Badge";
 import Badges from "./Badge/components/Badges";
 import Banners from "./Banners/components/Banners";
 import Banner from "./Banners/components/Banner";
+import Tooltips from "./Tooltip/components/index";
+import TooltipsButton from "./Tooltip/components/TooltipsButton";
+import { FaInfoCircle } from "react-icons/fa";
 
 const App = () => {
   return (
@@ -20,6 +23,18 @@ const App = () => {
       <Banners>
         <Banner></Banner>
       </Banners>
+
+      <Tooltips>
+        <TooltipsButton>
+          <FaInfoCircle />
+        </TooltipsButton>
+        <TooltipsButton>
+          <FaInfoCircle />
+        </TooltipsButton>
+        <TooltipsButton>
+          <FaInfoCircle />
+        </TooltipsButton>
+      </Tooltips>
     </main>
   );
 };
