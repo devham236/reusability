@@ -1,20 +1,8 @@
-import React, { ReactNode } from "react";
-import { IoMdMail } from "react-icons/io";
+import React from "react";
+import { TooltipsContainerProps } from "../types/tooltipsTypes";
 
-const TooltipsContainer = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
-  return (
-    <div className="tooltip-container">
-      <IoMdMail className="icon" />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
+const TooltipsContainer = ({ children }: TooltipsContainerProps) => {
+  return <div className="tooltip-container">{children}</div>;
 };
 
 export default TooltipsContainer;

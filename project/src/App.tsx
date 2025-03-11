@@ -3,7 +3,8 @@ import Badge from "./Badge/components/Badge";
 import Badges from "./Badge/components/Badges";
 import Banners from "./Banners/components/Banners";
 import Banner from "./Banners/components/Banner";
-import Tooltips from "./Tooltip/components/index.js";
+import Tooltips from "./Tooltip/components/index";
+import { IoMdMail } from "react-icons/io";
 
 const App = () => {
   return (
@@ -27,22 +28,11 @@ const App = () => {
           {(show: boolean) => {
             return (
               show && (
-                <Tooltips.Container
-                  title="Archive Notes"
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur."
-                ></Tooltips.Container>
-              )
-            );
-          }}
-        </Tooltips.Button>
-        <Tooltips.Button>
-          {(show: boolean) => {
-            return (
-              show && (
-                <Tooltips.Container
-                  title="Archive Notes"
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur."
-                ></Tooltips.Container>
+                <Tooltips.Container>
+                  <h3>Archive Notes</h3>
+                  <p>Lorem ipsum dolor sit amet...</p>
+                  <IoMdMail className="icon" />
+                </Tooltips.Container>
               )
             );
           }}
