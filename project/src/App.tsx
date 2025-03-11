@@ -28,12 +28,6 @@ const App = () => {
         <TooltipsButton>
           <FaInfoCircle />
         </TooltipsButton>
-        <TooltipsButton>
-          <FaInfoCircle />
-        </TooltipsButton>
-        <TooltipsButton>
-          <FaInfoCircle />
-        </TooltipsButton>
       </Tooltips>
     </main>
   );

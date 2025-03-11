@@ -144,6 +144,15 @@ body{
     cursor: pointer;
 }
 
+.tooltip-container{
+    position: absolute;
+    left: 0;
+    bottom: -75px;
+    width: 384px;
+    background-color: #EFF6FF;
+
+}
+
 .tooltip-button:not(:last-child){
     margin-right: 2rem;
 }
