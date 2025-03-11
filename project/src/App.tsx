@@ -3,7 +3,7 @@ import Badge from "./Badge/components/Badge";
 import Badges from "./Badge/components/Badges";
 import Banners from "./Banners/components/Banners";
 import Banner from "./Banners/components/Banner";
-import Tooltips from "./Tooltip/components/index";
+import Tooltips from "./Tooltip/components/index.js";
 
 const App = () => {
   return (
