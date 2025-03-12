@@ -7,8 +7,9 @@ const SearchInput = ({ children }: { children: string }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   function submitHandler(event: FormEvent<HTMLFormElement>) {
+    const randomId = Number(crypto.randomUUID());
     event.preventDefault();
-    addNote({ id: Number(crypto.randomUUID()), title: noteText });
+    addNote({ id: randomId, title: noteText });
     setNoteText("");
   }
 
