@@ -1,11 +1,9 @@
 import React, { ReactNode } from "react";
 
 const SearchInput = ({ children }: { children: ReactNode }) => {
+  function submitHandler() {}
   return (
-    <form
-      onSubmit={() => console.log("test")}
-      className="search-input-container"
-    >
+    <form onSubmit={submitHandler} className="search-input-container">
       {children}
     </form>
   );

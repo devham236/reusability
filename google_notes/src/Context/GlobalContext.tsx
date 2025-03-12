@@ -1,0 +1,9 @@
+import React, { createContext, ReactNode } from "react";
+
+const GlobalContext = createContext();
+
+const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
+  return <GlobalContext.Provider value={{}}>{children}</GlobalContext.Provider>;
+};
+
+export { GlobalContext, GlobalContextProvider };

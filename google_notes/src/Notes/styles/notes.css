@@ -1,12 +1,10 @@
 .notes-section{
     width: 600px;
-    background-color: aliceblue;
     margin-top: 3rem;
 }
 
 .notes-grid{
     width: 100%;
-    background-color: antiquewhite;
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 1rem;
