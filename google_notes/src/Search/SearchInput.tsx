@@ -12,7 +12,7 @@ const SearchInput = ({ children }: { children: string }) => {
   }
 
   useEffect(() => {
-    inputRef.current.focus();
+    inputRef?.current?.focus();
   }, []);
 
   return (
