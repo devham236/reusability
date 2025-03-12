@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/search.css";
 import SearchInput from "./SearchInput";
 import TooltipContainer from "../../Tooltip/components/TooltipContainer";
