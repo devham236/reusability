@@ -36,7 +36,18 @@ const App = () => {
 
       <Notes>
         <Notes.Grid>
-          <Notes.Item></Notes.Item>
+          <Notes.Item>
+            <p>lorem ipsum</p>
+          </Notes.Item>
+          <Notes.Item>
+            <p>lorem ipsum</p>
+          </Notes.Item>
+          <Notes.Item>
+            <p>lorem ipsum</p>
+          </Notes.Item>
+          <Notes.Item>
+            <p>lorem ipsum</p>
+          </Notes.Item>
         </Notes.Grid>
       </Notes>
     </main>

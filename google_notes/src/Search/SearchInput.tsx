@@ -1,7 +1,14 @@
 import React, { ReactNode } from "react";
 
 const SearchInput = ({ children }: { children: ReactNode }) => {
-  return <div className="search-input-container">{children}</div>;
+  return (
+    <form
+      onSubmit={() => console.log("test")}
+      className="search-input-container"
+    >
+      {children}
+    </form>
+  );
 };
 
 export default SearchInput;
