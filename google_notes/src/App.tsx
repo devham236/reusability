@@ -36,13 +36,23 @@ const App = () => {
       </SearchContainer>
 
       <Notes>
-        <Notes.Grid>
-          {allNotes.map((note) => (
-            <Notes.Item key={note.id} id={note.id}>
-              {note.title}
-            </Notes.Item>
-          ))}
-        </Notes.Grid>
+        <Notes.Display>
+          {(length) => {
+            return length > 0 ? (
+              <Notes.Grid>
+                {allNotes.map((note) => (
+                  <Notes.Item key={note.id} id={note.id}>
+                    {note.title}
+                  </Notes.Item>
+                ))}
+              </Notes.Grid>
+            ) : (
+              <Notes.Placeholder>
+                <p>You don't have any Notes yet.</p>
+              </Notes.Placeholder>
+            );
+          }}
+        </Notes.Display>
       </Notes>
     </main>
   );
