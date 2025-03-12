@@ -7,8 +7,11 @@ import { MdOutlineImage } from "react-icons/md";
 import { FaRegCheckSquare } from "react-icons/fa";
 import TooltipContainer from "./Tooltip/TooltipContainer";
 import Notes from "./Notes/index";
+import useGlobalContext from "./Context/hooks/useGlobalContext";
 
 const App = () => {
+  const { allNotes } = useGlobalContext();
+
   return (
     <main className="main-container">
       <SearchContainer>
@@ -36,7 +39,7 @@ const App = () => {
 
       <Notes>
         <Notes.Grid>
-          <Notes.Item>
+          {/* <Notes.Item>
             <p>lorem ipsum</p>
           </Notes.Item>
           <Notes.Item>
@@ -47,7 +50,12 @@ const App = () => {
           </Notes.Item>
           <Notes.Item>
             <p>lorem ipsum</p>
-          </Notes.Item>
+          </Notes.Item> */}
+          {allNotes.map((note) => (
+            <Notes.Item key={note.id} id={note.id}>
+              {note.title}
+            </Notes.Item>
+          ))}
         </Notes.Grid>
       </Notes>
     </main>

@@ -15,7 +15,7 @@ const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     async function fetchNotes() {
       try {
-        const res = await fetch("/publicNtes.json");
+        const res = await fetch("/publicNotes.json");
         const data = await res.json();
         setAllNotes(data);
       } catch (error) {
