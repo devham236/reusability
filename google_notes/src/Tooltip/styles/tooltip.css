@@ -1,0 +1,33 @@
+.tooltip-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip-icon > svg{
+    font-size: 1.4rem;
+}
+
+.tooltip-text{
+    background-color: rgb(32, 33, 36);
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -37px;
+    left: -70%;
+}
+
+.tooltip-text > p{
+    margin: 0.5rem;
+}
+
+.tooltip-icon-container{
+    display: flex;
+    align-items: center;
+}
+
+.tooltip-icon-container > *:not(:last-child){
+    margin-right: 0.5rem;
+}

@@ -11,7 +11,9 @@ const App = () => {
   return (
     <main className="main-container">
       <SearchContainer>
-        <SearchInput></SearchInput>
+        <SearchInput>
+          <input type="text" name="" id="" placeholder="New Note..." />
+        </SearchInput>
         <TooltipContainer>
           <Tooltip icon={<FaRegCheckSquare />}>
             {(showInfo: boolean) => {
