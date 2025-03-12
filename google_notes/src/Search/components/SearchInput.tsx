@@ -1,5 +1,6 @@
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import useGlobalContext from "../../Context/hooks/useGlobalContext";
+import { v4 as uuidv4 } from "uuid";
 
 const SearchInput = ({ children }: { children: string }) => {
   const [noteText, setNoteText] = useState("");
@@ -7,9 +8,8 @@ const SearchInput = ({ children }: { children: string }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   function submitHandler(event: FormEvent<HTMLFormElement>) {
-    const randomId = Number(crypto.randomUUID());
     event.preventDefault();
-    addNote({ id: randomId, title: noteText });
+    addNote({ id: uuidv4(), title: noteText });
     setNoteText("");
   }
 

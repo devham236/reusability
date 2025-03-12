@@ -1,11 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
 
-const exampleNote = {
-  id: 3,
-  title: "lorem ipsum",
+export type Note = {
+  id: number | string;
+  title: string;
 };
-
-export type Note = typeof exampleNote;
 
 export interface GlobalContextType {
   allNotes: Note[];
