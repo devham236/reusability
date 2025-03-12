@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FormEvent, useEffect, useRef, useState } from "react";
 import useGlobalContext from "../Context/hooks/useGlobalContext";
 
 const SearchInput = ({ children }: { children: string }) => {
   const [noteText, setNoteText] = useState("");
   const { addNote } = useGlobalContext();
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  function submitHandler(event: React.FormEvent<HTMLFormElement>) {
+  function submitHandler(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     addNote({ id: Number(crypto.randomUUID()), title: noteText });
   }
