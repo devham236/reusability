@@ -9,6 +9,7 @@ const SearchInput = ({ children }: { children: string }) => {
   function submitHandler(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     addNote({ id: Number(crypto.randomUUID()), title: noteText });
+    setNoteText("");
   }
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const SearchInput = ({ children }: { children: string }) => {
         name=""
         id=""
         ref={inputRef}
+        value={noteText}
         placeholder={children}
         onChange={(e) => setNoteText(e.target.value)}
       />
