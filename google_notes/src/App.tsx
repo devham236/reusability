@@ -15,9 +15,7 @@ const App = () => {
   return (
     <main className="main-container">
       <SearchContainer>
-        <SearchInput>
-          <input type="text" name="" id="" placeholder="New Note..." />
-        </SearchInput>
+        <SearchInput>New Note..</SearchInput>
         <TooltipContainer>
           <Tooltip icon={<FaRegCheckSquare />}>
             {(showInfo: boolean) => {
@@ -39,18 +37,6 @@ const App = () => {
 
       <Notes>
         <Notes.Grid>
-          {/* <Notes.Item>
-            <p>lorem ipsum</p>
-          </Notes.Item>
-          <Notes.Item>
-            <p>lorem ipsum</p>
-          </Notes.Item>
-          <Notes.Item>
-            <p>lorem ipsum</p>
-          </Notes.Item>
-          <Notes.Item>
-            <p>lorem ipsum</p>
-          </Notes.Item> */}
           {allNotes.map((note) => (
             <Notes.Item key={note.id} id={note.id}>
               {note.title}

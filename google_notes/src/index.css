@@ -1,3 +1,7 @@
+:root{
+    --yellow-color: rgb(254,239,195);
+}
+
 *{
     margin: 0;
     padding: 0;
