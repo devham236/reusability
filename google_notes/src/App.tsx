@@ -1,7 +1,37 @@
 import React from "react";
+import SearchContainer from "./Search/SearchContainer";
+import SearchInput from "./Search/SearchInput";
+import Tooltip from "./Tooltip/Tooltip";
+import { IoMdBrush } from "react-icons/io";
+import { MdOutlineImage } from "react-icons/md";
+import { FaRegCheckSquare } from "react-icons/fa";
+import TooltipContainer from "./Tooltip/TooltipContainer";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <main className="main-container">
+      <SearchContainer>
+        <SearchInput></SearchInput>
+        <TooltipContainer>
+          <Tooltip icon={<FaRegCheckSquare />}>
+            {(showInfo: boolean) => {
+              return showInfo && <p>lorem</p>;
+            }}
+          </Tooltip>
+          <Tooltip icon={<IoMdBrush />}>
+            {(showInfo: boolean) => {
+              return showInfo && <p>lorem</p>;
+            }}
+          </Tooltip>
+          <Tooltip icon={<MdOutlineImage />}>
+            {(showInfo: boolean) => {
+              return showInfo && <p>lorem</p>;
+            }}
+          </Tooltip>
+        </TooltipContainer>
+      </SearchContainer>
+    </main>
+  );
 };
 
 export default App;
