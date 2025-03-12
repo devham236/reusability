@@ -9,6 +9,6 @@ export interface GlobalContextType {
   allNotes: Note[];
   setAllNotes: Dispatch<SetStateAction<Note[]>>;
   addNote: (note: Note) => void;
-  deleteNote: (noteId: number) => void;
+  deleteNote: (noteId: string | number) => void;
   updateNote: (newValue: string, noteId: number) => void;
 }

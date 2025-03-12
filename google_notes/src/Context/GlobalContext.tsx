@@ -30,7 +30,7 @@ const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
     setAllNotes((prev) => [...prev, note]);
   }
 
-  function deleteNote(noteId: number) {
+  function deleteNote(noteId: number | string) {
     const filteredArray = allNotes.filter((note: Note) => note.id !== noteId);
     setAllNotes(filteredArray);
   }
