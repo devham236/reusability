@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useState } from "react";
+import React, { createContext, ReactNode, useEffect, useState } from "react";
 import { GlobalContextType, Note } from "./types/contextTypes";
 
 const GlobalContext = createContext<GlobalContextType>({
@@ -11,6 +11,20 @@ const GlobalContext = createContext<GlobalContextType>({
 
 const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
   const [allNotes, setAllNotes] = useState<Note[]>([]);
+
+  useEffect(() => {
+    async function fetchNotes() {
+      try {
+        const res = await fetch("/publicNtes.json");
+        const data = await res.json();
+        setAllNotes(data);
+      } catch (error) {
+        return error;
+      }
+    }
+
+    fetchNotes();
+  }, []);
 
   function addNote(note: Note) {
     setAllNotes((prev) => [...prev, note]);
