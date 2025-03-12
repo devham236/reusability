@@ -1,12 +1,12 @@
 import React from "react";
-import SearchContainer from "./Search/SearchContainer";
-import SearchInput from "./Search/SearchInput";
-import Tooltip from "./Tooltip/Tooltip";
+import SearchContainer from "./Search/components/SearchContainer";
+import SearchInput from "./Search/components/SearchInput";
+import Tooltip from "./Tooltip/components/Tooltip";
 import { IoMdBrush } from "react-icons/io";
 import { MdOutlineImage } from "react-icons/md";
 import { FaRegCheckSquare } from "react-icons/fa";
-import TooltipContainer from "./Tooltip/TooltipContainer";
-import Notes from "./Notes/index";
+import TooltipContainer from "./Tooltip/components/TooltipContainer";
+import Notes from "./Notes/components/index";
 import useGlobalContext from "./Context/hooks/useGlobalContext";
 
 const App = () => {

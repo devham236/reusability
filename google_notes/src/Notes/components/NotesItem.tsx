@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
-import useGlobalContext from "../Context/hooks/useGlobalContext";
+import useGlobalContext from "../../Context/hooks/useGlobalContext";
 
 const NotesItem = ({ children, id }: { children: ReactNode; id: number }) => {
   const { deleteNote } = useGlobalContext();

@@ -1,5 +1,5 @@
 import React, { FormEvent, useEffect, useRef, useState } from "react";
-import useGlobalContext from "../Context/hooks/useGlobalContext";
+import useGlobalContext from "../../Context/hooks/useGlobalContext";
 
 const SearchInput = ({ children }: { children: string }) => {
   const [noteText, setNoteText] = useState("");
