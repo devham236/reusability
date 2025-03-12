@@ -1,4 +1,3 @@
-import React from "react";
 import SearchContainer from "./Search/components/SearchContainer";
 import Notes from "./Notes/components/index";
 import useGlobalContext from "./Context/hooks/useGlobalContext";

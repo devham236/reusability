@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { GlobalContextType, Note } from "./types/contextTypes";
 
 const GlobalContext = createContext<GlobalContextType>({
@@ -36,7 +36,11 @@ const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
   }
 
   function updateNote(newValue: string, noteId: number) {
-    const matchingNote = allNotes.find((prev: Note) => prev.id === noteId);
+    setAllNotes((prevNotes) =>
+      prevNotes.map((note) =>
+        note.id === noteId ? { ...note, title: newValue } : note
+      )
+    );
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import useGlobalContext from "../../Context/hooks/useGlobalContext";
 
 const NotesDisplay = ({

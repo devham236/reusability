@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import useGlobalContext from "../../Context/hooks/useGlobalContext";
 
