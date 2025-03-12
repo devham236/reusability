@@ -6,6 +6,7 @@ import { IoMdBrush } from "react-icons/io";
 import { MdOutlineImage } from "react-icons/md";
 import { FaRegCheckSquare } from "react-icons/fa";
 import TooltipContainer from "./Tooltip/TooltipContainer";
+import Notes from "./Notes/index";
 
 const App = () => {
   return (
@@ -32,6 +33,12 @@ const App = () => {
           </Tooltip>
         </TooltipContainer>
       </SearchContainer>
+
+      <Notes>
+        <Notes.Grid>
+          <Notes.Item></Notes.Item>
+        </Notes.Grid>
+      </Notes>
     </main>
   );
 };
